@@ -2,15 +2,25 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
+// Define Proxima Nova Regular
+const proximaNovaRegular = localFont({
+  src: "./fonts/proximanova_regular.ttf",
+  variable: "--font-proxima-nova-regular",
+  weight: "400",
 });
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+
+// Define Proxima Nova Bold
+const proximaNovaBold = localFont({
+  src: "./fonts/proximanova_bold.otf",
+  variable: "--font-proxima-nova-bold",
+  weight: "700",
+});
+
+// Define Proxima Nova Black
+const proximaNovaBlack = localFont({
+  src: "./fonts/proximanova_black.ttf",
+  variable: "--font-proxima-nova-black",
+  weight: "900",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${proximaNovaRegular.variable} ${proximaNovaBold.variable} ${proximaNovaBlack.variable} antialiased`}
       >
         {children}
       </body>

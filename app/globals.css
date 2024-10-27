@@ -1,3 +1,94 @@
+@font-face {
+  font-family: "Proxima Nova Normal";
+  src: url("/fonts/proximanova_regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova Bold";
+  src: url("/fonts/proximanova_bold.otf") format("opentype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Proxima Nova Black";
+  src: url("/fonts/proximanova_black.ttf") format("truetype");
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-[#0C0C0C] text-white;
+}
+
+.custom-button-font {
+  @apply font-sans; /* Replace 'font-sans' with your font class */
+}
+
+.bold-font {
+  @apply font-bold; /* Replace 'font-sans' with your font class */
+}
+
+.font-regular {
+  font-family: "Proxima Nova Regular", sans-serif;
+  font-weight: 400;
+}
+
+.font-bold {
+  font-family: "Proxima Nova Bold", sans-serif;
+  font-weight: 700;
+}
+
+.font-black {
+  font-family: "Proxima Nova Black", sans-serif;
+  font-weight: 900;
+}
+
+.custom-gradient-border {
+  position: relative;
+  display: inline-block;
+  padding: 2px; /* Adjust to control the border thickness */
+  background: linear-gradient(90deg, #3c50e0 0%, #b478ff 50%, #f1ac0c 100%);
+}
+
+.custom-gradient-border .inner-button {
+  background-color: #0c0c0c; /* Black background for button */
+  padding: 14px 24px; /* Adjust for inner padding */
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.custom-gradient-border:hover .margin-left-animation {
+  margin-left: 6px;
+  transition: all 0.3s;
+}
+
+.custom-gradient-border:hover .margin-right-animation {
+  margin-right: 6px;
+  transition: all 0.3s;
+}
+
+.lines {
+  width: 172px;
+  flex-shrink: 0;
+  align-self: stretch;
+  border-right: 1px dashed rgba(221, 221, 221, 0.08);
+  border-left: 1px dashed rgba(221, 221, 221, 0.08);
+}
+
+.tagline {
+  display: flex;
+  height: 32px;
+  padding: 7px 16px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  display: inline-flex; /* Changed from flex to inline-flex */
+}

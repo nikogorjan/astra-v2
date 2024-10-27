@@ -37,36 +37,43 @@ export const Navbar = (props: NavbarProps) => {
   const isMobile = useMediaQuery("(max-width: 991px)");
 
   return (
-    <nav className="sticky top-0 z-50 flex w-full items-center border-b border-border-primary bg-background-primary lg:min-h-18 lg:px-[5%]">
+    <nav className="sticky top-0 z-50 flex w-full items-center lg:border-b lg:border-[rgba(221,221,221,0.05)] bg-[#0C0C0C] min-h-[73px] lg:px-[5%]">
       <div className="mx-auto size-full lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr] lg:items-center lg:justify-between lg:gap-4">
         <div className="flex min-h-16 items-center justify-between px-[5%] md:min-h-18 lg:min-h-full lg:px-0">
           <a href={logo.url}>
             <img src={logo.src} alt={logo.alt} />
           </a>
-          <div className="flex items-center gap-4 lg:hidden">
+          <div className="flex items-center gap-[14px] lg:hidden">
             <div>
               {buttons.map((button, index) => (
-                <Button key={index} className="w-full px-4 py-1" {...button}>
+                <Button
+                  key={index}
+                  className="custom-button-font w-full py-4 px-6 bg-[#3C50E0] text-white border-none font-bold text-sm/[14px]"
+                  {...button}
+                >
                   {button.title}
                 </Button>
               ))}
             </div>
             <button
-              className="-mr-2 flex size-12 flex-col items-center justify-center"
+              className="-mr-2 flex size-8 flex-col items-end justify-center"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
             >
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-black"
+                className="my-[3px] h-0.5 bg-white rounded-full"
+                style={{ width: "1.625rem" }} // First line: 1.5rem
                 animate={isMobileMenuOpen ? ["open", "rotatePhase"] : "closed"}
                 variants={topLineVariants}
               />
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-black"
+                className="my-[3px] h-0.5 bg-white rounded-full"
+                style={{ width: "1.0625rem" }} // Second line: 0.98rem
                 animate={isMobileMenuOpen ? "open" : "closed"}
                 variants={middleLineVariants}
               />
               <motion.span
-                className="my-[3px] h-0.5 w-6 bg-black"
+                className="my-[3px] h-0.5 bg-white rounded-full"
+                style={{ width: "0.5625rem" }} // Third line: 0.52rem
                 animate={isMobileMenuOpen ? ["open", "rotatePhase"] : "closed"}
                 variants={bottomLineVariants}
               />
@@ -95,7 +102,7 @@ export const Navbar = (props: NavbarProps) => {
               ) : (
                 <a
                   href={navLink.url}
-                  className="block py-3 text-md lg:px-4 lg:py-2 lg:text-base"
+                  className="block py-3 text-md lg:px-4 lg:py-2 lg:text-base custom-button-font"
                 >
                   {navLink.title}
                 </a>
@@ -105,7 +112,11 @@ export const Navbar = (props: NavbarProps) => {
         </motion.div>
         <div className="hidden justify-self-end lg:block">
           {buttons.map((button, index) => (
-            <Button key={index} className="px-6 py-2" {...button}>
+            <Button
+              key={index}
+              className="font-bold text-sm/[14px] bg-[#3C50E0] border-none py-4 px-6 custom-button-font"
+              {...button}
+            >
               {button.title}
             </Button>
           ))}
@@ -185,7 +196,7 @@ const SubMenu = ({
 export const NavbarDefaults: NavbarProps = {
   logo: {
     url: "#",
-    src: "https://d22po4pjz3o32e.cloudfront.net/logo-image.svg",
+    src: "/images/logo.svg",
     alt: "Logo image",
   },
   navLinks: [
@@ -204,7 +215,7 @@ export const NavbarDefaults: NavbarProps = {
   ],
   buttons: [
     {
-      title: "Button",
+      title: "Try for free",
       size: "sm",
     },
   ],
@@ -232,7 +243,7 @@ const middleLineVariants = {
     transition: { duration: 0.1 },
   },
   closed: {
-    width: "1.5rem",
+    width: "1.0625rem",
     transition: { delay: 0.3, duration: 0.2 },
   },
 };
@@ -241,6 +252,7 @@ const bottomLineVariants = {
   open: {
     translateY: -8,
     transition: { delay: 0.1 },
+    width: "1.625rem",
   },
   rotatePhase: {
     rotate: 45,
@@ -250,6 +262,7 @@ const bottomLineVariants = {
     translateY: 0,
     rotate: 0,
     transition: { duration: 0.2 },
+    width: "0.5625rem",
   },
 };
 
