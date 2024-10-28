@@ -21,7 +21,7 @@
 @tailwind utilities;
 
 body {
-  @apply bg-[#0C0C0C] text-white;
+  @apply font-sans bg-[#0C0C0C] text-white;
 }
 
 .custom-button-font {
@@ -32,19 +32,8 @@ body {
   @apply font-bold; /* Replace 'font-sans' with your font class */
 }
 
-.font-regular {
-  font-family: "Proxima Nova Regular", sans-serif;
-  font-weight: 400;
-}
-
-.font-bold {
-  font-family: "Proxima Nova Bold", sans-serif;
-  font-weight: 700;
-}
-
-.font-black {
-  font-family: "Proxima Nova Black", sans-serif;
-  font-weight: 900;
+.black {
+  font-family: "Proxima Nova Black";
 }
 
 .custom-gradient-border {
@@ -56,10 +45,27 @@ body {
 
 .custom-gradient-border .inner-button {
   background-color: #0c0c0c; /* Black background for button */
-  padding: 14px 24px; /* Adjust for inner padding */
+  padding: 13px 24px; /* Adjust for inner padding */
   color: white;
   display: inline-block;
   font-weight: bold;
+}
+
+.custom-gradient-border-small {
+  position: relative;
+  padding: 2px; /* Adjust to control the border thickness */
+  background: linear-gradient(90deg, #3c50e0 0%, #b478ff 50%, #f1ac0c 100%);
+  border-radius: 50px;
+}
+
+.custom-gradient-border-small .inner-button-small {
+  background-color: #0c0c0c; /* Black background for button */
+  padding: 3px 12px; /* Adjust for inner padding */
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 50px;
 }
 
 .custom-gradient-border:hover .margin-left-animation {
@@ -91,4 +97,127 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   background: rgba(255, 255, 255, 0.05);
   display: inline-flex; /* Changed from flex to inline-flex */
+}
+
+.tag-button {
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.s0 {
+  fill: #ffffff;
+}
+
+.highlight-text {
+  color: #fdb300; /* Apply the highlight color */
+  position: relative;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line break */
+}
+
+.underline-svg {
+  position: absolute;
+  bottom: -2px; /* Position the SVG just below the text */
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.translateY {
+  transform: translateY(-83.71px);
+}
+
+.strong-blur {
+  filter: blur(125px);
+}
+
+.link-color {
+  color: #afafaf;
+}
+
+.s-floater {
+  fill: #fdb300;
+}
+
+#banner {
+  cursor: pointer;
+  overflow: visible;
+}
+
+#banner:hover #left3 {
+  transform: translate(-5px, 2px) rotate(-10deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#banner:hover #left1 {
+  transform: translate(-2px, -4px) rotate(+5deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#banner:hover #left2 {
+  transform: translate(-2px, 4px) rotate(-5deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#banner:hover #right1 {
+  transform: translate(4px, -5px) rotate(22deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#banner:hover #right2 {
+  transform: translate(4px, -2px) rotate(6deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+#banner:hover #right3 {
+  transform: translate(3px, 2px) rotate(6deg); /* Moves slightly left and down */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+@media (max-width: 1280px) {
+  .translateY {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 401px) {
+  .custom-font-size {
+    font-size: 11px; /* Reduce font size to fit in one line */
+  }
+  .banner-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 362px) {
+  .custom-font-size {
+    font-size: 10px; /* Reduce font size to fit in one line */
+  }
+}
+
+@media (max-width: 341px) {
+  .custom-font-size {
+    font-size: 9px; /* Reduce font size to fit in one line */
+  }
+}
+
+@media (max-width: 322px) {
+  .tagline {
+    flex-direction: column;
+    height: auto;
+  }
+  .separator-img {
+    display: none;
+  }
+}
+
+@media (max-width: 299px) {
+  .custom-row {
+    flex-direction: column;
+  }
+
+  .custom-margin {
+    margin-bottom: 12px;
+  }
 }

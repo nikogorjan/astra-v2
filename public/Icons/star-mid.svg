@@ -1,0 +1,11 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 14" width="17" height="14">
+	<title>astraai-svg</title>
+	<defs>
+		<image width="9" height="12" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAMCAMAAACHgmeRAAAAAXNSR0IB2cksfwAAAQ5QTFRFPFDfP1HfTFXjWVnmZV3qcmLtfmbwi2r0l273SFTiVFjlYVzobWDsemTvhmjyk232oHH5Q1LhUFbkXFrnaV/rdmPugmfxj2v1m2/4qHT7TFXjWFnmZV3qcWHtfmbwimr0l273pHL6sHb+YVzobWDsemTvhmjyk232n3H5rHX8tnr0XFrnaV/rdmPugmfxj2v1tHj9un3jZV3pcWHtimr0l273o3L6uHzsv4HSbWDseWTvn3H5rHX8vX/bw4XBdWPugmfxjmv1p3P7tHj+un3jwYPJx4ivimrzo3L6sHb+uHvsxYe4zIyen3H5tnr1vH/byYqn0JCNm2/4p3P7tHj+un3kwYPKx4iwzo6W1JN8zAuirgAAAFp0Uk5TAAAAekUAAAAAAADRnAAAAAAAD2r/7VEHAABT+P/////pMAAPav/uUAcAAAAAANKdAAEAAHxDAAEAAAAFEAAAAAAAAgIAAAAABAEAAAAAAAAAAAsAAAAAAAAAl6ko5QAAAFFJREFUeJxjZGCEAQZOGEsQLiYFZ3FJwljaIOIlozgjoxHjZT1GxjeijIyWjFcYdRjfCTMy2jMyXtcCq2NzPOjACBbjY7S7o8r4XoiR0RFmNADqBQxtm8GUVgAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="img2" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+	<g id="letters">
+	</g>
+</svg>
