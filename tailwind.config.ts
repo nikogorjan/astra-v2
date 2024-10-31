@@ -13,12 +13,7 @@ const config: Config = {
         "custom-lg": "1400px", // Define a custom breakpoint at 1400px
       },
       fontFamily: {
-        sans: [
-          "var(--font-proxima-nova-regular)",
-          "var(--font-proxima-nova-bold)",
-          "var(--font-proxima-nova-black)",
-          "sans-serif",
-        ],
+        sans: ["Proxima Nova", "sans-serif"],
       },
       colors: {
         background: "var(--background)",

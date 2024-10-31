@@ -2,25 +2,19 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-// Define Proxima Nova Regular
 const proximaNovaRegular = localFont({
-  src: "./fonts/proximanova_regular.ttf",
+  src: "./fonts/Proxima Nova Regular.ttf",
   variable: "--font-proxima-nova-regular",
   weight: "400",
+  style: "normal",
 });
 
 // Define Proxima Nova Bold
 const proximaNovaBold = localFont({
-  src: "./fonts/proximanova_bold.otf",
+  src: "./fonts/Proxima Nova Bold.ttf",
   variable: "--font-proxima-nova-bold",
   weight: "700",
-});
-
-// Define Proxima Nova Black
-const proximaNovaBlack = localFont({
-  src: "./fonts/proximanova_black.ttf",
-  variable: "--font-proxima-nova-black",
-  weight: "900",
+  style: "normal",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${proximaNovaRegular.variable} ${proximaNovaBold.variable} ${proximaNovaBlack.variable} antialiased`}
+        className={`${proximaNovaRegular.variable} ${proximaNovaBold.variable} antialiased`}
       >
         {children}
       </body>
