@@ -3,6 +3,8 @@
 
 import { Button } from "@relume_io/relume-ui";
 import { motion } from "framer-motion";
+import Lottie from "lottie-react";
+import sparklingAnimation from "../../../public/animation/lottie-sparkling.json";
 
 const BuyButton = () => {
   return (

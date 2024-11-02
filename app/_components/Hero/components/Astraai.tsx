@@ -11,7 +11,7 @@ const Astraai: React.FC = () => {
       viewBox="0 0 76 14"
       width="76"
       height="14"
-      className="cursor-pointer"
+      className="cursor-pointer width-custom"
       whileHover="hover" // Define a hover state for the entire SVG
     >
       <title>Vector-svg</title>

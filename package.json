@@ -12,9 +12,11 @@
     "@relume_io/relume-tailwind": "^0.6.0",
     "@relume_io/relume-ui": "^0.6.0",
     "express": "^4.21.1",
+    "lottie-react": "^2.4.0",
     "next": "^15.0.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.13.1"
   },
   "devDependencies": {
     "@types/node": "^20",
