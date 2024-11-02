@@ -1,7 +1,3 @@
-import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxChevronRight } from "react-icons/rx";
-
 type ImageProps = {
   src: string;
   alt?: string;
@@ -11,7 +7,6 @@ export type FeatureSectionProps = {
   icon: ImageProps;
   heading: string;
   description: string;
-  button: ButtonProps;
   bgColor?: string;
   headerColor?: string;
   textColor?: string;
@@ -21,7 +16,6 @@ const FeatureSection = ({
   icon,
   heading,
   description,
-  button,
   bgColor,
   headerColor,
   textColor,

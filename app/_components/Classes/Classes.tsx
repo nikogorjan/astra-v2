@@ -1,4 +1,3 @@
-import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { RxChevronRight } from "react-icons/rx";
 import { AnimatedHeading2 } from "./components/AnimatedHeading2";
@@ -20,9 +19,6 @@ type FeatureSection = {
 };
 
 type Props = {
-  tagline: string;
-  heading: string;
-  description: string;
   featureSections: FeatureSection[];
 };
 
@@ -30,7 +26,7 @@ export type ClassesProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Classes = (props: ClassesProps) => {
-  const { tagline, heading, description, featureSections } = {
+  const { featureSections } = {
     ...ClassesDefaults,
     ...props,
   } as Props;
@@ -53,9 +49,6 @@ export const Classes = (props: ClassesProps) => {
 };
 
 export const ClassesDefaults: ClassesProps = {
-  tagline: "Tagline",
-  heading: "Short heading goes here",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   featureSections: [
     {
       icon: {

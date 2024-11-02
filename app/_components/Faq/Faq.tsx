@@ -1,5 +1,4 @@
 import {
-  Button,
   Accordion,
   AccordionTrigger,
   AccordionContent,
@@ -7,20 +6,12 @@ import {
 } from "@relume_io/relume-ui";
 import { RxChevronDown } from "react-icons/rx";
 
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxPlus } from "react-icons/rx";
-
 type QuestionsProps = {
   title: string;
   answer: string;
 };
 
 type Props = {
-  heading: string;
-  description: string;
-  footerHeading: string;
-  footerDescription: string;
-  button: ButtonProps;
   questions: QuestionsProps[];
 };
 
@@ -28,14 +19,7 @@ export type FaqProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Faq = (props: FaqProps) => {
-  const {
-    heading,
-    description,
-    questions,
-    footerHeading,
-    footerDescription,
-    button,
-  } = {
+  const { questions } = {
     ...FaqDefaults,
     ...props,
   } as Props;
@@ -76,9 +60,6 @@ export const Faq = (props: FaqProps) => {
 };
 
 export const FaqDefaults: FaqProps = {
-  heading: "FAQs",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
   questions: [
     {
       title: "Can I cancel my subscription to Astra AI at any time?",
@@ -112,12 +93,6 @@ export const FaqDefaults: FaqProps = {
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat. Aenean faucibus nibh et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.",
     },
   ],
-  footerHeading: "Still have questions?",
-  footerDescription: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  button: {
-    title: "Contact",
-    variant: "secondary",
-  },
 };
 
 Faq.displayName = "Faq";

@@ -1,10 +1,9 @@
 "use client";
 
-import { Button, TabsContent } from "@relume_io/relume-ui";
+import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { BiCheck } from "react-icons/bi";
 
 type Billing = "yearly" | "monthly";
 
@@ -30,9 +29,6 @@ type Tab = {
 };
 
 type Props = {
-  tagline: string;
-  heading: string;
-  description: string;
   defaultTabValue: Billing;
   tabs: Tab[];
 };
@@ -41,7 +37,7 @@ export type PricingProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Pricing = (props: PricingProps) => {
-  const { tagline, heading, description, defaultTabValue, tabs } = {
+  const { defaultTabValue, tabs } = {
     ...PricingDefaults,
     ...props,
   } as Props;
@@ -224,9 +220,6 @@ const PricingPlan = ({
 );
 
 export const PricingDefaults: PricingProps = {
-  tagline: "Tagline",
-  heading: "Pricing plan",
-  description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   defaultTabValue: "monthly",
   tabs: [
     {

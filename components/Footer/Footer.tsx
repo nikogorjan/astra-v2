@@ -96,7 +96,7 @@ export const Footer = () => {
             className="order-first md:order-1 mb-4 md:mb-0"
           />
           <p className="text-xs font-semibold leading-[10px] md:order-2">
-            "For the next generation"
+            &quot;For the next generation&quot;
           </p>
         </div>
       </div>

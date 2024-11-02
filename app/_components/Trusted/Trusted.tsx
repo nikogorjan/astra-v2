@@ -1,25 +1,14 @@
-import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxChevronRight } from "react-icons/rx";
-
-type ImageProps = {
-  src: string;
-  alt?: string;
-};
-
 type Props = {
   tagline: string;
   heading: string;
   description: string;
-  buttons: ButtonProps[];
-  image: ImageProps;
 };
 
 export type TrustedProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Trusted = (props: TrustedProps) => {
-  const { tagline, heading, description, buttons, image } = {
+  const { tagline, heading, description } = {
     ...TrustedDefaults,
     ...props,
   } as Props;

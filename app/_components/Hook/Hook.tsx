@@ -1,8 +1,7 @@
 "use client";
 
 import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxChevronRight } from "react-icons/rx";
+
 import StarButton from "../Hero/components/StarButton";
 import { Clients } from "../Hero/components/Clients";
 
@@ -12,8 +11,6 @@ type ImageProps = {
 };
 
 type Props = {
-  heading: string;
-  description: string;
   image: ImageProps;
 };
 
@@ -21,7 +18,7 @@ export type HookProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Hook = (props: HookProps) => {
-  const { heading, description, image } = {
+  const { image } = {
     ...HookDefaults,
     ...props,
   } as Props;
@@ -66,9 +63,6 @@ export const Hook = (props: HookProps) => {
 };
 
 export const HookDefaults: HookProps = {
-  heading: "Long heading is what you see here in this feature section",
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
   image: {
     src: "/images/HookMoc.svg",
     alt: "Relume placeholder image",

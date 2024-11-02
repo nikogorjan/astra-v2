@@ -1,31 +1,9 @@
 "use client";
 import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxChevronRight } from "react-icons/rx";
 import StarButton from "../Hero/components/StarButton";
 import { Clients } from "./components/Clients";
 
-type ImageProps = {
-  src: string;
-  alt?: string;
-};
-
-type Props = {
-  tagline: string;
-  heading: string;
-  description: string;
-  buttons: ButtonProps[];
-  image: ImageProps;
-};
-
-export type FinalsProps = React.ComponentPropsWithoutRef<"section"> &
-  Partial<Props>;
-
-export const Finals = (props: FinalsProps) => {
-  const { tagline, heading, description, buttons, image } = {
-    ...FinalsDefaults,
-    ...props,
-  } as Props;
+export const Finals = () => {
   return (
     <section
       id="relume"
@@ -67,12 +45,6 @@ export const Finals = (props: FinalsProps) => {
       </div>
     </section>
   );
-};
-
-export const FinalsDefaults: FinalsProps = {
-  tagline: "Finals by",
-  heading: "40,257",
-  description: "Students Across the World",
 };
 
 Finals.displayName = "Finals";

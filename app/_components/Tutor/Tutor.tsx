@@ -9,17 +9,14 @@ import {
   DialogOverlay,
 } from "@relume_io/relume-ui";
 import clsx from "clsx";
-import { FaCirclePlay } from "react-icons/fa6";
 import { CgSpinner } from "react-icons/cg";
 import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
 type ImageProps = {
   src: string;
   alt?: string;
 };
 
 type Props = {
-  description: string;
   video: string;
   image: ImageProps;
 };
@@ -29,7 +26,7 @@ export type TutorProps = React.ComponentPropsWithoutRef<"section"> &
 
 export const Tutor = (props: TutorProps) => {
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
-  const { description, video, image } = {
+  const { video, image } = {
     ...TutorDefaults,
     ...props,
   } as Props;
@@ -120,8 +117,6 @@ export const Tutor = (props: TutorProps) => {
 };
 
 export const TutorDefaults: TutorProps = {
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.",
   video: "https://www.youtube.com/embed/8DKLYsikxTs?si=Ch9W0KrDWWUiCMMW",
   image: {
     src: "/images/TestimonialImage.png",
