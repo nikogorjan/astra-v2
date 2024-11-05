@@ -33,7 +33,7 @@ export const Hero = (props: HeroProps) => {
   } as Props;
 
   return (
-    <section id="relume" className="relative px-[5%] pt-[19px] md:pt-12">
+    <section id="hero" className="relative px-[5%] pt-[19px] md:pt-12">
       <div className="container">
         <div className="flex flex-col items-center">
           <div className="text-center">

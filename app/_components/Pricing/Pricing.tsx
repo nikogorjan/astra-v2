@@ -1,43 +1,29 @@
 "use client";
 
-import { Button } from "@relume_io/relume-ui";
-import type { ButtonProps } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-
-type Billing = "yearly" | "monthly";
-
-type ImageProps = {
-  src: string;
-  alt?: string;
-};
-
-type PricingPlan = {
-  icon: ImageProps;
-  planName: string;
-  price: string;
-  discount?: string;
-  description: string;
-  features: string[];
-  button: ButtonProps;
-};
+import { PricingPlan } from "./components/PricingPlan";
+import type { Billing, PricingPlanType } from "./components/PricingPlan";
 
 type Tab = {
   value: Billing;
   tabName: string;
-  plans: PricingPlan[];
+  plans: PricingPlanType[];
 };
 
 type Props = {
   defaultTabValue: Billing;
   tabs: Tab[];
+  paragraph1: string;
+  SmallHeader: string;
+  paragraph2: string;
 };
 
 export type PricingProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Pricing = (props: PricingProps) => {
-  const { defaultTabValue, tabs } = {
+  const { defaultTabValue, tabs, paragraph1, SmallHeader, paragraph2 } = {
     ...PricingDefaults,
     ...props,
   } as Props;
@@ -49,7 +35,7 @@ export const Pricing = (props: PricingProps) => {
   };
 
   return (
-    <section id="relume" className="px-[5%] py-8 md:py-14">
+    <section id="pricing" className="px-[5%] py-8 md:py-14">
       <div className="container max-w-[920px]">
         <div className="mx-auto max-w-lg text-center mb-8">
           <h2 className="text-[28px] md:text-[56px] font-bold leading-7 md:leading-[56px]">
@@ -114,21 +100,16 @@ export const Pricing = (props: PricingProps) => {
         </AnimatePresence>
 
         <div className="py-6 text-sm leading-5 text-[#d9d9d9] text-center">
-          * We don’t require any credit card information until you decide to use
-          Astra AI Plus.
+          {paragraph1}
         </div>
         <div className="w-full bg-[#3C50E0] p-6 md:py-6 md:px-8 flex flex-col md:flex-row gap-8">
           <img src="/Icons/Badge.svg" alt="Check Icon" />
           <div>
             <p className="text-[#fff] text-lg font-bold leading-[130%] mb-4">
-              If your math grades don’t improve, we’ll refund your money in
-              full!
+              {SmallHeader}
             </p>
             <p className="text-[#d9d9d9] text-md font-semibold leading-[140%]">
-              We are fully confident in the effectiveness of the Astra AI
-              system. The AI math tutor will change the way a student learns and
-              understands math. If your grades don’t improve by at least 2
-              grades, we will refund 100% of your purchase!
+              {paragraph2}
             </p>
           </div>
         </div>
@@ -137,89 +118,13 @@ export const Pricing = (props: PricingProps) => {
   );
 };
 
-const PricingPlan = ({
-  plan,
-  billing,
-  index,
-}: {
-  plan: PricingPlan;
-  billing: Billing;
-  index: number;
-}) => (
-  <div
-    className={`relative flex h-full flex-col justify-between p-[2px] ${
-      index === 1
-        ? "bg-gradient-to-b from-[#F1AC0C] via-[#B478FF] to-[#3C50DF]"
-        : ""
-    }`}
-  >
-    {/* Inner Content Wrapper with border effect */}
-    <div className="flex flex-col justify-between h-full p-8 bg-[rgba(24,24,24,1)] border border-[rgba(255,255,255,0.05)] backdrop-blur-[6px]">
-      <div>
-        <div className="flex flex-col items-start justify-start mb-5">
-          <img src={plan.icon.src} alt={plan.icon.alt} className="h-6" />
-        </div>
-
-        <h4 className="mb-2 text-2xl font-bold leading-7">
-          {plan.price}
-          <span className="text-2xl font-bold leading-7">
-            {billing === "monthly" ? " / month" : " / month"}
-          </span>
-        </h4>
-
-        {billing === "yearly" && (
-          <div className="flex gap-[4px]">
-            <h3
-              className={`text-[14px] leading-6 ${
-                index === 0 ? "font-medium" : "font-bold"
-              }`}
-            >
-              {plan.planName}
-            </h3>
-            <h3 className="text-[14px] leading-6 text-white opacity-50 line-through">
-              {plan.discount}
-            </h3>
-          </div>
-        )}
-
-        <div className="my-6 h-[2px] w-full shrink-0 bg-white opacity-5" />
-
-        <div className="mb-8 mt-4 grid grid-cols-1 gap-y-4 py-2">
-          {plan.features.map((feature, featureIndex) => (
-            <div key={featureIndex} className="flex self-start">
-              <div className="mr-4 flex-none self-start">
-                {index === 0 ? (
-                  <img src="/Icons/check.svg" alt="Check Icon" /> // First plan uses regular check icon
-                ) : (
-                  <img src="/Icons/check-yellow.svg" alt="Yellow Check Icon" /> // Other plans use yellow check icon
-                )}
-              </div>
-              <p>{feature}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
-      <Button
-        {...plan.button}
-        className="w-full text-white font-semibold"
-        style={{
-          backgroundColor: index === 0 ? "#FDB300" : "#3C50E0", // Conditional background color
-          color: index === 0 ? "black" : "white",
-        }}
-      >
-        {plan.button.title}
-        {index === 0 ? (
-          <img src="/Icons/arrow-right-black.svg" alt="Check Icon" /> // First plan uses regular check icon
-        ) : (
-          <img src="/Icons/arrow-right-white.svg" alt="Yellow Check Icon" /> // Other plans use yellow check icon
-        )}
-      </Button>
-    </div>
-  </div>
-);
-
 export const PricingDefaults: PricingProps = {
+  paragraph1:
+    "* We don’t require any credit card information until you decide to use Astra AI Plus.",
+  SmallHeader:
+    "If your math grades don’t improve, we’ll refund your money in full!",
+  paragraph2:
+    "We are fully confident in the effectiveness of the Astra AI system. The AI math tutor will change the way a student learns and understands math. If your grades don’t improve by at least 2 grades, we will refund 100% of your purchase!",
   defaultTabValue: "monthly",
   tabs: [
     {
@@ -232,7 +137,6 @@ export const PricingDefaults: PricingProps = {
             alt: "Relume icon 1",
           },
           planName: "Free. Forever.",
-          description: "Lorem ipsum dolor sit amet",
           price: "$0",
           features: [
             "5 questions / month",
@@ -247,7 +151,6 @@ export const PricingDefaults: PricingProps = {
             alt: "Relume icon 2",
           },
           planName: "Billed annualy: $299.00",
-          description: "Lorem ipsum dolor sit amet",
           price: "$29",
           features: [
             "Take a picture of the equation and explore the step-by-step solution",
@@ -270,7 +173,6 @@ export const PricingDefaults: PricingProps = {
             alt: "Relume icon 1",
           },
           planName: "Free. Forever.",
-          description: "Lorem ipsum dolor sit amet",
           price: "$0",
           features: [
             "5 questions / month",
@@ -286,7 +188,6 @@ export const PricingDefaults: PricingProps = {
           },
           planName: "Billed annualy: $299.00",
           discount: "($479.88)",
-          description: "Lorem ipsum dolor sit amet",
           price: "$20",
           features: [
             "Take a picture of the equation and explore the step-by-step solution",

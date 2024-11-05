@@ -24,7 +24,7 @@ export const Faq = (props: FaqProps) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] py-8 md:py-14">
+    <section id="faq" className="px-[5%] py-8 md:py-14">
       <div className="container max-w-[920px]">
         <h2 className="text-[28px] md:text-[56px] font-bold leading-[28px] md:leading-[64px] text-center mb-4 md:mb-8">
           Frequently Asked Questions{" "}

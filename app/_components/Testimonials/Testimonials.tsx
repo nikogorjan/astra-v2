@@ -15,14 +15,14 @@ export const Testimonials = (props: TestimonialsProps) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className="px-[5%] pb-14 testimonial-padding">
+    <section id="testimonials" className="px-[5%] pb-14 testimonial-padding">
       <div className="container">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-3 custom-grid-gap">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
               className="flex flex-col items-start border border-[rgba(255,255,255,0.05)] bg-[rgba(255,255,255,0.05)] backdrop-blur-[6px] p-8 custom-testimonial-padding"
-              style={{ alignSelf: "start" }} // Ensures each grid item adjusts naturally to its content height
+              style={{ alignSelf: "start" }}
             >
               <img
                 src="/Icons/yellow-quote.svg"

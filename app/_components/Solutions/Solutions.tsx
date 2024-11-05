@@ -1,6 +1,3 @@
-import type { ButtonProps } from "@relume_io/relume-ui";
-import { RxChevronRight } from "react-icons/rx";
-
 type ImageProps = {
   src: string;
   alt?: string;
@@ -9,11 +6,8 @@ type ImageProps = {
 type BlogPost = {
   url: string;
   image: ImageProps;
-  category: string;
-  readTime: string;
   title: string;
   description: string;
-  button: ButtonProps;
 };
 
 type Props = {
@@ -31,7 +25,7 @@ export const Solutions = (props: SolutionsProps) => {
   } as Props;
   return (
     <section
-      id="relume"
+      id="solutions"
       className="px-[5%] py-8 pb-12 md:pb-[104px] md:py-14 bg-white relative overflow-hidden"
     >
       <div className="container z-20 relative">
@@ -78,7 +72,7 @@ export const Solutions = (props: SolutionsProps) => {
             <img
               src="/images/LinesWhite.svg"
               className="size-full object-cover hidden custom-lg:flex"
-              alt="Lines"
+              alt="White Lines 3"
             />
             <div className="absolute inset-0" />
           </div>
@@ -95,55 +89,31 @@ export const SolutionsDefaults: SolutionsProps = {
       url: "#",
       image: {
         src: "/images/solution1.svg",
-        alt: "Relume placeholder image 1",
+        alt: "Solution Image 1",
       },
-      category: "Category",
-      readTime: "5 min read",
       title: "Snap a photo or enter a math problem.",
       description:
         "Astra AI guides you step-by-step, not just to the answer but through the journey of understanding.",
-      button: {
-        title: "Read more",
-        variant: "link",
-        size: "link",
-        iconRight: <RxChevronRight />,
-      },
     },
     {
       url: "#",
       image: {
         src: "/images/solution2.svg",
-        alt: "Relume placeholder image 2",
+        alt: "Solution Image 2",
       },
-      category: "Category",
-      readTime: "5 min read",
       title: "Solve the problem, step by step.",
       description:
         "ASTRA AI won’t just provide you with the answer – it will guide you through the process to give you an understanding of how to get there on your own.",
-      button: {
-        title: "Read more",
-        variant: "link",
-        size: "link",
-        iconRight: <RxChevronRight />,
-      },
     },
     {
       url: "#",
       image: {
         src: "/images/solution3.svg",
-        alt: "Relume placeholder image 3",
+        alt: "Solution Image 3",
       },
-      category: "Category",
-      readTime: "5 min read",
       title: "Become independent in problem-solving.",
       description:
         "Over time, you’ll build a solid foundation and gain enough confidence to effectively solve complex math problems without any assistance.",
-      button: {
-        title: "Read more",
-        variant: "link",
-        size: "link",
-        iconRight: <RxChevronRight />,
-      },
     },
   ],
 };

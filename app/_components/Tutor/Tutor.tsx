@@ -64,11 +64,7 @@ export const Tutor = (props: TutorProps) => {
                   alt={image.alt}
                 />
                 <div className="absolute z-20 p-3 bg-[rgba(255,255,255,0.25)] backdrop-blur-sm">
-                  <img
-                    src="/Icons/PlayButton.svg"
-                    alt="Play button"
-                    className=""
-                  />
+                  <img src="/Icons/PlayButton.svg" alt="Play button" />
                 </div>
                 <span className="absolute inset-0 z-10 " />
               </div>
@@ -106,7 +102,7 @@ export const Tutor = (props: TutorProps) => {
             <img
               src="/images/LinesWhite.svg"
               className="size-full object-cover hidden custom-lg:flex"
-              alt="Lines"
+              alt="White Lines"
             />
             <div className="absolute inset-0" />
           </div>
@@ -120,7 +116,7 @@ export const TutorDefaults: TutorProps = {
   video: "https://www.youtube.com/embed/8DKLYsikxTs?si=Ch9W0KrDWWUiCMMW",
   image: {
     src: "/images/TestimonialImage.png",
-    alt: "Relume placeholder image",
+    alt: "Tutor Image",
   },
 };
 

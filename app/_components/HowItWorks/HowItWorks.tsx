@@ -41,7 +41,7 @@ export const HowItWorks = (props: HowItWorksProps) => {
   };
 
   return (
-    <section id="relume" className="px-[5%] py-8 md:py-14">
+    <section id="how-it-works" className="px-[5%] py-8 md:py-14">
       <div className="container max-w-[920px]">
         <div className="mb-6">
           <div className="mx-auto flex max-w-lg flex-col items-center text-center">
@@ -102,7 +102,7 @@ export const HowItWorks = (props: HowItWorksProps) => {
 export const HowItWorksDefaults: HowItWorksProps = {
   image: {
     src: "/images/LandingThumbnail.png",
-    alt: "Relume placeholder image",
+    alt: "Video thumbnail",
   },
   video: "https://www.youtube.com/watch?v=dqH-__zkXuc",
 };

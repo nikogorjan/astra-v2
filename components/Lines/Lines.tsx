@@ -8,7 +8,7 @@ export const Lines = () => {
           {/* Increase z-index */}
           <img
             src="/images/Lines.svg"
-            className="size-full object-cover hidden custom-lg:flex"
+            className="size-full object-cover hidden custom-xl:flex"
             alt="Lines"
           />
           <div className="absolute inset-0" />

@@ -6,7 +6,7 @@ import { Clients } from "./components/Clients";
 export const Finals = () => {
   return (
     <section
-      id="relume"
+      id="finals"
       className="px-[5%] py-8 md:py-14 relative overflow-hidden"
     >
       <div
@@ -22,6 +22,7 @@ export const Finals = () => {
             <img
               src="/Icons/MaturaLogo.svg"
               className="w-[88px] md:w-[102px] mb-8"
+              alt="Matura Logo"
             />
 
             <h2 className="text-[28px] md:text-[42px] font-bold leading-[100%] md:leading-[100%] text-center max-w-[560px]">
@@ -39,8 +40,16 @@ export const Finals = () => {
           </div>
         </div>
         <div className="w-full  bg-[#181818] flex items-center justify-center">
-          <img src="/images/macbook.svg" className="hidden md:block" />
-          <img src="/images/macbookPart.svg" className="md:hidden" />
+          <img
+            src="/images/macbook.svg"
+            className="hidden md:block"
+            alt="MacBook Desktop"
+          />
+          <img
+            src="/images/macbookPart.svg"
+            className="md:hidden"
+            alt="Macbook Mobile"
+          />
         </div>
       </div>
     </section>

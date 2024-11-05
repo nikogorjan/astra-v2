@@ -32,7 +32,7 @@ export const AnimatedHeading = () => {
           available 24/7
           <motion.img
             src="/images/underline.svg"
-            alt="Underline"
+            alt="Underline 1"
             className="underline-svg"
             initial={{ width: "0%" }}
             animate={{ width: "100%" }}
@@ -45,7 +45,7 @@ export const AnimatedHeading = () => {
             available
             <motion.img
               src="/images/underline.svg"
-              alt="Underline"
+              alt="Underline 2"
               className="underline-svg"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
@@ -56,7 +56,7 @@ export const AnimatedHeading = () => {
             24/7
             <motion.img
               src="/images/underline.svg"
-              alt="Underline"
+              alt="Underline 3"
               className="underline-svg"
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}

@@ -10,7 +10,8 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        "custom-lg": "1400px", // Define a custom breakpoint at 1400px
+        "custom-lg": "1160px",
+        "custom-xl": "1280px",
       },
       fontFamily: {
         sans: ["Proxima Nova", "sans-serif"],

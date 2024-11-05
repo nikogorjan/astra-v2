@@ -1,14 +1,18 @@
 export const Footer = () => {
   return (
     <>
-      <section id="relume" className=" px-[5%] py-8 md:py-14 ">
+      <section id="footer" className=" px-[5%] py-8 md:py-14 ">
         <div className="container relative md:px-6">
           <div className="md:flex md:flex-wrap gap-8 md:justify-between  md:flex-row grid grid-cols-2 mb-8">
             <div>
               <p className="uppercase text-xs font-bold leading-[140%] mb-3">
                 products
               </p>
-              <img src="/Icons/aifooter.svg" className="mb-[18px]" />
+              <img
+                src="/Icons/aifooter.svg"
+                className="mb-[18px]"
+                alt="Footer Hook Button"
+              />
               <p className="text-sm text-[#afafaf] font-semibold leading-3 mb-[18px]">
                 Tutor AI
               </p>
@@ -94,6 +98,7 @@ export const Footer = () => {
           <img
             src="/Icons/bannerlogo.svg"
             className="order-first md:order-1 mb-4 md:mb-0"
+            alt="Footer Banner Logo"
           />
           <p className="text-xs font-semibold leading-[10px] md:order-2">
             &quot;For the next generation&quot;

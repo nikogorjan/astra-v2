@@ -52,7 +52,7 @@ export const Navbar5 = (props: Navbar5Props) => {
   return (
     <nav className="sticky top-0 z-50 custom-lg:border-b custom-lg:border-[rgba(221,221,221,0.05)] bg-[#0C0C0C]  ">
       <Banner />
-      <div className="flex w-full items-center justify-between min-h-[73px] custom-lg:px-[5%]">
+      <div className="custom-lg:max-w-xxl mx-auto flex w-full items-center justify-between min-h-[73px] px-0 custom-lg:px-[1rem] custom-xl:px-0">
         <div className="size-full custom-lg:flex custom-lg:items-center custom-lg:justify-between">
           <div className="custom-lg:flex">
             <NavbarMobile
@@ -91,7 +91,6 @@ export const Navbar5Defaults: Navbar5Props = {
     },
     { title: "Matura AI", url: "#" },
     { title: "Notebook AI", url: "#" },
-    { title: "Become a Partner", url: "#" },
     { title: "Video Explanations", url: "#" },
     { title: "Resources", url: "#" },
   ],

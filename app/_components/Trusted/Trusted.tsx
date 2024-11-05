@@ -14,7 +14,7 @@ export const Trusted = (props: TrustedProps) => {
   } as Props;
   return (
     <section
-      id="relume"
+      id="trusted-by"
       className="px-[5%] py-8 md:py-14 bg-white relative overflow-hidden"
     >
       <div className="container">
@@ -39,11 +39,10 @@ export const Trusted = (props: TrustedProps) => {
           <div className="w-full h-full flex justify-between"></div>
           <div className="absolute inset-0 z-10">
             {" "}
-            {/* Increase z-index */}
             <img
               src="/images/LinesWhite.svg"
               className="size-full object-cover hidden custom-lg:flex"
-              alt="Lines"
+              alt="White Lines 2"
             />
             <div className="absolute inset-0" />
           </div>

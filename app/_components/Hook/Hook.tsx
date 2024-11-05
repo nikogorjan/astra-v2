@@ -23,7 +23,7 @@ export const Hook = (props: HookProps) => {
     ...props,
   } as Props;
   return (
-    <section id="relume" className=" px-[5%] y-8 md:py-14 ">
+    <section id="hook" className=" px-[5%] y-8 md:py-14 ">
       <div className="container relative max-w-[920px]">
         <div className="mb-6">
           <div className="mx-auto flex max-w-lg flex-col items-center text-center">
@@ -53,7 +53,7 @@ export const Hook = (props: HookProps) => {
           <img
             src="/images/hookbg.svg"
             className="size-full object-cover hidden custom-lg:flex"
-            alt="Lines"
+            alt="Ceossed Lines"
           />
           <div className="absolute inset-0" />
         </div>
@@ -65,7 +65,7 @@ export const Hook = (props: HookProps) => {
 export const HookDefaults: HookProps = {
   image: {
     src: "/images/HookMoc.svg",
-    alt: "Relume placeholder image",
+    alt: "Hook image",
   },
 };
 

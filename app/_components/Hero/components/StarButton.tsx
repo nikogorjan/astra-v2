@@ -96,7 +96,7 @@ const StarButton: React.FC = () => {
                   />
                   <motion.img
                     src="/Icons/star-big.svg"
-                    alt="Star Big"
+                    alt="Star Big 2"
                     className="absolute"
                     initial={{ opacity: 0, x: 0, y: 0 }}
                     animate={{
@@ -112,7 +112,7 @@ const StarButton: React.FC = () => {
                   />
                   <motion.img
                     src="/Icons/star-small.svg"
-                    alt="Star Big"
+                    alt="Star Small 2"
                     className="absolute"
                     initial={{ opacity: 0, x: 0, y: 0 }}
                     animate={{
@@ -128,7 +128,7 @@ const StarButton: React.FC = () => {
                   />
                   <motion.img
                     src="/Icons/star-mid.svg"
-                    alt="Star Big"
+                    alt="Star Mid 2"
                     className="absolute"
                     initial={{ opacity: 0, x: 0, y: 0 }}
                     animate={{
@@ -144,7 +144,7 @@ const StarButton: React.FC = () => {
                   />
                   <motion.img
                     src="/Icons/star-mid.svg"
-                    alt="Star Big"
+                    alt="Star Mid 3"
                     className="absolute"
                     initial={{ opacity: 0, x: 0, y: 0 }}
                     animate={{
