@@ -24,7 +24,7 @@ const SubMenu = ({
       onMouseLeave={() => !isMobile && setIsDropdownOpen(false)}
     >
       <button
-        className="w-full flex custom-lg:ml-4 items-center justify-between gap-5 py-3 text-center text-md custom-lg:w-auto custom-lg:flex-none custom-lg:justify-start custom-lg:gap-2 custom-lg:py-2 custom-lg:text-base"
+        className="w-full flex  items-center justify-between gap-5 py-3 text-center text-md custom-lg:w-auto custom-lg:flex-none custom-lg:justify-start custom-lg:gap-2 custom-lg:py-2 custom-lg:text-base"
         onClick={() => setIsDropdownOpen((prev) => !prev)}
       >
         <span className="block custom-lg:text-sm text-md custom-button-font font-bold uppercase custom-lg:normal-case custom-lg:text-[#afafaf] text-text-alternative hover:text-white  duration-300">

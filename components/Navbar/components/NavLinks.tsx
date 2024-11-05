@@ -14,7 +14,7 @@ type NavLinksProps = {
 };
 
 const NavLinks = ({ links, isMobile }: NavLinksProps) => (
-  <div className="custom-lg:flex gap-5">
+  <div className="custom-lg:flex gap-5 custom-lg:ml-4">
     {links.map((navLink, index) => (
       <div key={index} className="first:pt-4 custom-lg:first:pt-0">
         {navLink.subMenuLinks && navLink.subMenuLinks.length > 0 ? (

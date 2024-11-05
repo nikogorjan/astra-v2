@@ -10,7 +10,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        "custom-lg": "1160px",
+        "custom-lg": "1000px",
         "custom-xl": "1280px",
       },
       fontFamily: {

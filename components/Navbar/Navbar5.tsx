@@ -91,8 +91,14 @@ export const Navbar5Defaults: Navbar5Props = {
     },
     { title: "Matura AI", url: "#" },
     { title: "Notebook AI", url: "#" },
-    { title: "Video Explanations", url: "#" },
-    { title: "Resources", url: "#" },
+    {
+      title: "More",
+      url: "#",
+      subMenuLinks: [
+        { title: "Video Explanations", url: "#" },
+        { title: "Resources", url: "#" },
+      ],
+    },
   ],
   buttons: [
     {
