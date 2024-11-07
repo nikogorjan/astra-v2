@@ -1,3 +1,5 @@
+import LanguagesButton from "./components/LanguageButton";
+
 export const Footer = () => {
   return (
     <>
@@ -80,14 +82,7 @@ export const Footer = () => {
               </p>
             </div>
           </div>
-          <div className="inline-flex flex items-center justify-center font-bold text-[14px] border-none py-[3px] pl-[6px] pr-[8px] custom-button-font cursor-pointer mr-3 tag-button h-9 mb-6">
-            <img
-              src="/Icons/Britain.svg"
-              alt="Britain Icon"
-              className="w-[24px] h-[24px] margin-left-animation"
-            />
-            <p className="ml-1">EN</p>
-          </div>
+          <LanguagesButton />
         </div>
       </section>
       <div className=" bg-[#3C50E0] px-[5%] ">

@@ -110,6 +110,18 @@ body {
   height: auto;
 }
 
+.underline-svg-2 {
+  position: absolute;
+  bottom: -3px; /* Position the SVG just below the text */
+  left: 0;
+  width: 100%;
+  height: auto;
+}
+
+.underlined-link {
+  position: relative;
+}
+
 .translateY {
   transform: translateY(-56px);
 }
@@ -186,6 +198,81 @@ body {
   letter-spacing: -1.5px;
 }
 
+.sub-menu-items-wrapper:hover .sub-menu-item-icon {
+  filter: none !important;
+}
+
+.sub-menu-item-color-hover {
+  color: white;
+}
+
+/* If the wrapper has flip-enabled class, change link color on hover */
+.flip-enabled:hover .sub-menu-item-color-hover {
+  color: black !important;
+}
+
+.submenu-item-tag {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  transition: all 0.3s ease;
+}
+
+.sub-menu-items-wrapper:hover .submenu-item-tag {
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(6px);
+}
+
+.sub-menu-items-wrapper:hover .custom-text-color {
+  color: #1a1a1a;
+}
+
+.move-mobile {
+}
+
+.mobile-sub-menu {
+  z-index: 9999;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 148px);
+  background-color: #0c0c0c;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.open-mobile-menu {
+  transform: translateX(0%);
+}
+
+.menu-border {
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.15);
+}
+
+.language-hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+
+.language-hover:hover {
+  background-color: #23242a !important;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
 @media (max-width: 1280px) {
   .translateY {
     transform: translateY(0px);
@@ -202,6 +289,21 @@ body {
 
   .custom-grid-gap {
     gap: 1rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .custom-lg-border-shadow {
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0px 15px 35px 0px rgba(0, 0, 0, 0.15);
+  }
+}
+
+@media (max-width: 1000px) {
+  .moved {
+    transition: all 0.3s ease;
+    transform: translateX(120px);
+    opacity: 0;
   }
 }
 

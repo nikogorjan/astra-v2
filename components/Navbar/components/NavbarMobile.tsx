@@ -2,6 +2,7 @@
 
 import { Button } from "@relume_io/relume-ui";
 import HamburgerIcon from "./HamburgerIcon";
+import LanguagesButton, { LanguagesButtonDefaults } from "./LanguagesButton"; // Import LanguagesButton
 
 type NavbarMobileProps = {
   logo: {
@@ -31,9 +32,15 @@ const NavbarMobile = ({
     </div>
 
     <div className="flex items-center justify-center">
-      <Button className="custom-lg:hidden font-bold text-sm/[14px] bg-[#3C50E0] border-none py-4 px-6 custom-button-font">
-        Try for free
-      </Button>
+      {/* Conditionally render Button or LanguagesButton */}
+      {isMobileMenuOpen ? (
+        <LanguagesButton languages={LanguagesButtonDefaults.languages} />
+      ) : (
+        <Button className="custom-lg:hidden font-bold text-sm/[14px] bg-[#3C50E0] border-none py-4 px-6 custom-button-font">
+          Try for free
+        </Button>
+      )}
+
       <HamburgerIcon
         isMobileMenuOpen={isMobileMenuOpen}
         onClick={toggleMobileMenu}
