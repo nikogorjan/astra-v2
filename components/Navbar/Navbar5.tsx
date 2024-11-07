@@ -17,6 +17,10 @@ type ImageProps = {
 type NavLink = {
   url: string;
   title: string;
+  icon?: ImageProps;
+  tag?: string;
+  bgColor?: string;
+  flip?: string;
   subMenuLinks?: NavLink[];
 };
 
@@ -36,7 +40,7 @@ export const Navbar5 = (props: Navbar5Props) => {
   } as Props;
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const isMobile = useMediaQuery("(max-width: 1400px)");
+  const isMobile = useMediaQuery("(max-width: 1020px)");
   const [menuHeight, setMenuHeight] = useState("100vh"); // Default height as fallback
 
   useEffect(() => {
@@ -50,7 +54,7 @@ export const Navbar5 = (props: Navbar5Props) => {
   }, [isMobileMenuOpen, isMobile]);
 
   return (
-    <nav className="sticky top-0 z-50 custom-lg:border-b custom-lg:border-[rgba(221,221,221,0.05)] bg-[#0C0C0C]  ">
+    <nav className="sticky top-0 z-50 custom-lg:border-b custom-lg:border-[rgba(221,221,221,0.05)] bg-[#0C0C0C]">
       <Banner />
       <div className="custom-lg:max-w-xxl mx-auto flex w-full items-center justify-between min-h-[73px] px-0 custom-lg:px-[1rem] custom-xl:px-0">
         <div className="size-full custom-lg:flex custom-lg:items-center custom-lg:justify-between">
@@ -84,9 +88,45 @@ export const Navbar5Defaults: Navbar5Props = {
       title: "Subjects",
       url: "#",
       subMenuLinks: [
-        { title: "Matura AI", url: "#" },
-        { title: "Notebook AI", url: "#" },
-        { title: "Link Seven", url: "#" },
+        {
+          title: "Math",
+          url: "#",
+          icon: {
+            src: "/Icons/Math.svg",
+            alt: "Math icon",
+          },
+          bgColor: "#3C50E0",
+        },
+        {
+          title: "English",
+          url: "#",
+          icon: {
+            src: "/Icons/English.svg",
+            alt: "English icon",
+          },
+          bgColor: "#F33568",
+        },
+        {
+          title: "Chemistry",
+          url: "#",
+          icon: {
+            src: "/Icons/Chemistry.svg",
+            alt: "Chemistry icon",
+          },
+          bgColor: "#FDB300",
+          flip: "yes",
+        },
+        {
+          title: "Physics",
+          url: "#",
+          icon: {
+            src: "/Icons/Atom.svg",
+            alt: "Atom logo",
+          },
+          bgColor: "#FFF",
+          tag: "coming soon",
+          flip: "yes",
+        },
       ],
     },
     { title: "Matura AI", url: "#" },

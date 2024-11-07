@@ -8,9 +8,19 @@ import NavLinks from "./NavLinks";
 import BuyButton from "./BuyButton";
 import BuyButtonWithIcon from "./BuyButtonWithIcon";
 
+type ImageProps = {
+  url?: string;
+  src: string;
+  alt?: string;
+};
+
 type NavLink = {
   url: string;
   title: string;
+  icon?: ImageProps;
+  tag?: string;
+  bgColor?: string;
+  flip?: string;
   subMenuLinks?: NavLink[];
 };
 
@@ -38,13 +48,13 @@ const NavbarDesktop = ({
     exit="close"
     animate={isMobileMenuOpen ? "open" : "close"}
     transition={{ duration: 0.4 }}
-    className={`overflow-auto px-[5%] ${
-      isMobileMenuOpen ? "py-4" : ""
+    className={`overflow-hidden ${
+      isMobileMenuOpen ? "py-6" : ""
     } gap-5 flex flex-col custom-lg:flex-row custom-lg:items-center custom-lg:px-0 custom-lg:[--height-closed:auto] custom-lg:[--height-open:auto] justify-between custom-lg:justify-center`}
   >
     <NavLinks links={links} isMobile={isMobile} />
 
-    <div className="flex flex-col gap-3 custom-lg:hidden">
+    <div className="flex flex-col gap-3 custom-lg:hidden px-[5%]">
       <div className="flex items-center justify-center font-bold text-[14px] border-none py-4 px-4 custom-button-font cursor-pointer mr-2">
         <img
           src="/Icons/Person.svg"
