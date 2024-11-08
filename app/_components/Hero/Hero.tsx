@@ -52,7 +52,8 @@ export const Hero = (props: HeroProps) => {
             </div>
           </div>
           <div className="translateY">
-            <Phones />
+            {/*<Phones />*/}
+            <img src="images/English.png" alt="Phones image" />
           </div>
         </div>
         <div className="flex items-center justify-center translateY border-margin-top md:mt-0 mt-[10%]">
