@@ -45,7 +45,7 @@ export const Hero = (props: HeroProps) => {
                 <Button className="py-4 px-6 bg-[#3C50E0] custom-button-font font-bold w-full sm:w-auto justify-center border-none cursor-pointer">
                   {buttons[0].title}
                 </Button>
-                <StarButton />
+                <StarButton text="Buy Astra AI Plus" />
               </div>
               <Clients />
               <Funds />

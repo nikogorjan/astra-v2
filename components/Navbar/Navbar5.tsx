@@ -79,7 +79,7 @@ export const Navbar5 = (props: Navbar5Props) => {
 
 export const Navbar5Defaults: Navbar5Props = {
   logo: {
-    url: "#",
+    url: "/",
     src: "/images/logo.svg",
     alt: "Logo image",
   },
@@ -129,7 +129,7 @@ export const Navbar5Defaults: Navbar5Props = {
         },
       ],
     },
-    { title: "Matura AI", url: "#" },
+    { title: "Matura AI", url: "/matura-ai" },
     { title: "Notebook AI", url: "#" },
     {
       title: "More",
