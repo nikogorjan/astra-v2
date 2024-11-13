@@ -3,6 +3,7 @@
 import StarButton from "@/app/_components/Hero/components/StarButton";
 import { BackgroundImage } from "./components/BackgroundImage";
 import "./Hero.css";
+import { BottomShadowOverlay } from "./components/BottomShadowOverlay/BottomShadowOverlay";
 
 type Props = {
   description: string;
@@ -45,6 +46,7 @@ export const Hero = (props: HeroProps) => {
         </div>
       </div>
       <BackgroundImage src="/images/matura-bg.png" />
+      <BottomShadowOverlay />
     </section>
   );
 };
