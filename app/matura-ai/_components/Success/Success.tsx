@@ -36,6 +36,15 @@ export const Success = (props: SuccessProps) => {
     ...props,
   } as Props;
   const [isIframeLoaded, setIsIframeLoaded] = useState(false);
+
+  const getEmbedUrl = (url: string) => {
+    const urlObj = new URL(url);
+    if (urlObj.hostname === "www.youtube.com" && urlObj.searchParams.get("v")) {
+      return `https://www.youtube.com/embed/${urlObj.searchParams.get("v")}`;
+    }
+    return url; // Return the original URL if it's already in the embed format
+  };
+
   return (
     <section id="relume" className="px-[5%] py-8 md:py-14">
       <div className="container">
@@ -77,7 +86,7 @@ export const Success = (props: SuccessProps) => {
                         hidden: !isIframeLoaded,
                       }
                     )}
-                    src={video}
+                    src={getEmbedUrl(video)}
                     allow="autoplay; encrypted-media; picture-in-picture"
                     allowFullScreen
                     onLoad={() => setIsIframeLoaded(true)}
@@ -130,7 +139,7 @@ export const SuccessDefaults: SuccessProps = {
     src: "/images/matura-ai-thumbnail.jpeg",
     alt: "Matura ai placeholder image",
   },
-  video: "https://www.youtube.com/embed/8DKLYsikxTs?si=Ch9W0KrDWWUiCMMW",
+  video: "https://www.youtube.com/watch?v=v-TwG8Tx6Lc&t=1s",
   SmallHeader:
     "If your math grades don’t improve, we’ll refund your money in full!",
   paragraph2:
