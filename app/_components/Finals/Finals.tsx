@@ -17,39 +17,49 @@ export const Finals = () => {
         }}
       >
         {/* Inner Content Wrapper with a solid background color */}
-        <div className="w-full  bg-[#181818]">
-          <div className="pt-12 px-4 md:px-8 flex flex-col items-center">
-            <img
-              src="/Icons/MaturaLogo.svg"
-              className="w-[88px] md:w-[102px] mb-8"
-              alt="Matura Logo"
-            />
+        <div className="bg-[#181818] relative">
+          <div className="w-full   relative z-20">
+            <div className="pt-12 px-4 md:px-8 flex flex-col items-center">
+              <img
+                src="/Icons/MaturaLogo.svg"
+                className="w-[88px] md:w-[102px] mb-8"
+                alt="Matura Logo"
+              />
 
-            <h2 className="text-[28px] md:text-[42px] font-bold leading-[100%] md:leading-[100%] text-center max-w-[560px]">
-              With our AI tool, prepare for your final exams{" "}
-              <span className="text-[#FDB300]">with ease!</span>
-            </h2>
+              <h2 className="text-[28px] md:text-[42px] font-bold leading-[100%] md:leading-[100%] text-center max-w-[560px]">
+                With our AI tool, prepare for your final exams{" "}
+                <span className="text-[#FDB300]">with ease!</span>
+              </h2>
 
-            <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-x-4 gap-y-3 md:mt-8 mb-6 sm:mb-8 w-full">
-              <Button className="py-4 px-6 bg-[#3C50E0] custom-button-font font-bold w-full sm:w-auto justify-center border-none cursor-pointer">
-                Try 5 Free Questions
-              </Button>
-              <StarButton text="Buy Astra AI Plus" />
+              <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-x-4 gap-y-3 md:mt-8 mb-6 sm:mb-8 w-full">
+                <Button className="py-4 px-6 bg-[#3C50E0] custom-button-font font-bold w-full sm:w-auto justify-center border-none cursor-pointer">
+                  Try 5 Free Questions
+                </Button>
+                <StarButton text="Buy Astra AI Plus" />
+              </div>
+              <Clients />
             </div>
-            <Clients />
           </div>
-        </div>
-        <div className="w-full  bg-[#181818] flex items-center justify-center">
-          <img
-            src="/images/macbook.svg"
-            className="hidden md:block"
-            alt="MacBook Desktop"
-          />
-          <img
-            src="/images/macbookPart.svg"
-            className="md:hidden"
-            alt="Macbook Mobile"
-          />
+          <div className=" w-full   flex items-center justify-center z-20 relative">
+            <img
+              src="/images/macbook.svg"
+              className="hidden md:block"
+              alt="MacBook Desktop"
+            />
+            <img
+              src="/images/macbookPart.svg"
+              className="md:hidden"
+              alt="Macbook Mobile"
+            />
+          </div>
+          <div className="absolute inset-0 z-10 opacity-25 md:opacity-60 top-64">
+            <img
+              src="/images/martura-hook-bg.png"
+              className="size-full object-cover"
+              alt="Matura bg image"
+            />
+            <div className="absolute inset-0 " />
+          </div>
         </div>
       </div>
     </section>
@@ -57,3 +67,19 @@ export const Finals = () => {
 };
 
 Finals.displayName = "Finals";
+
+{
+  /*
+  
+  <div className="absolute inset-0 -z-10">
+            <img
+              src="/images/martura-hook-bg.png"
+              className="size-full object-cover"
+              alt="Matura bg image"
+            />
+            <div className="absolute inset-0 " />
+          </div>
+
+          
+  */
+}
