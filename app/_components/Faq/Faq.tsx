@@ -42,9 +42,16 @@ export const Faq = (props: FaqProps) => {
             >
               <AccordionTrigger
                 icon={
-                  <RxChevronDown className="size-2 shrink-0 text-text-alternative transition-transform duration-300 md:size-8" />
+                  <>
+                    {/* <RxChevronDown className="size-2 shrink-0 text-text-alternative transition-transform duration-300 md:size-8" /> */}
+                    <img
+                      src="/Icons/chevron-down.svg"
+                      alt="chevron down"
+                      className="transition-transform duration-300 ml-8"
+                    />
+                  </>
                 }
-                className="md:py-5 md:text-sm leading-[160%] [&[data-state=open]>svg]:rotate-180 font-semibold text-left"
+                className="md:py-5 md:text-sm leading-[160%] [&[data-state=open]>img]:rotate-180 font-semibold text-left"
               >
                 {question.title}
               </AccordionTrigger>

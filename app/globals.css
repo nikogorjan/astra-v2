@@ -24,18 +24,25 @@ body {
 }
 
 .custom-gradient-border {
-  position: relative;
   display: inline-block;
-  padding: 2px; /* Adjust to control the border thickness */
-  background: linear-gradient(90deg, #3c50e0 0%, #b478ff 50%, #f1ac0c 100%);
+  padding: 2px; /* Adjust border thickness */
+  overflow: hidden;
 }
 
-.custom-gradient-border .inner-button {
-  background-color: #0c0c0c; /* Black background for button */
-  padding: 13px 24px; /* Adjust for inner padding */
+.gradient-border-bg {
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #3c50e0 0%, #b478ff 50%, #f1ac0c 100%);
+  border-image-slice: 1;
+  padding: 2px; /* Space between gradient border and button content */
+}
+
+.inner-button {
+  background-color: transparent; /* Fully transparent */
   color: white;
-  display: inline-block;
   font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .custom-gradient-border-small {
