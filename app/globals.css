@@ -273,6 +273,16 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.percent-gradient-color {
+  background: var(
+    --gradients-Elements---Attention-Horizontal,
+    linear-gradient(90deg, #f1ac0c 0%, #b478ff 49.5%, #3c50df 100%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 @media (max-width: 1280px) {
   .translateY {
     transform: translateY(0px);

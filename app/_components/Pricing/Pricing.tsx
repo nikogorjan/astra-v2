@@ -103,7 +103,7 @@ export const Pricing = (props: PricingProps) => {
           {paragraph1}
         </div>
         <div className="w-full bg-[#3C50E0] p-6 md:py-6 md:px-8 flex flex-col md:flex-row gap-8">
-          <img src="/Icons/Badge.svg" alt="Check Icon" />
+          <img src="/Icons/Badge.svg" alt="Check Icon" className="w-[100px]" />
           <div>
             <p className="text-[#fff] text-lg font-bold leading-[130%] mb-4">
               {SmallHeader}

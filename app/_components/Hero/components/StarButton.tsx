@@ -2,11 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@relume_io/relume-ui";
 import { motion, AnimatePresence } from "framer-motion";
 
-const StarButton: React.FC = () => {
+interface StarButtonProps {
+  text: string;
+}
+
+const StarButton: React.FC<StarButtonProps> = ({ text }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isExpandableOpen, setIsExpandableOpen] = useState(false);
 
-  // Trigger expandable open on hover and set a delayed close while hovering
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
@@ -16,7 +19,6 @@ const StarButton: React.FC = () => {
         setIsExpandableOpen(false);
       }, 2000);
     } else {
-      // Close immediately when hover is lost
       setIsExpandableOpen(false);
     }
 
@@ -31,7 +33,8 @@ const StarButton: React.FC = () => {
     >
       <Button className="custom-button-font inner-button font-bold w-full sm:w-auto">
         <div className="flex items-center gap-[6px] w-full sm:w-auto justify-center relative">
-          <div className="mr-2">Buy Astra AI Plus</div>
+          {/* Display dynamic text passed as a prop */}
+          <div className="mr-2">{text}</div>
 
           {/* Expandable div with star animation */}
           <motion.div
@@ -47,6 +50,7 @@ const StarButton: React.FC = () => {
             <AnimatePresence>
               {isExpandableOpen && (
                 <>
+                  {/* Star animations */}
                   <motion.img
                     src="/Icons/star-small.svg"
                     alt="Star Small"
