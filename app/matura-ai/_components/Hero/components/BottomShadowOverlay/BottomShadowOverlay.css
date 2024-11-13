@@ -24,7 +24,7 @@
     rgba(12, 12, 12, 0.33) 24.23%,
     rgba(12, 12, 12, 0.75) 55.4%,
     rgba(12, 12, 12, 0.9) 81.35%,
-    rgba(12, 12, 12, 1) 94.35%
+    rgba(12, 12, 12, 0.95) 94.35%
   );
   pointer-events: none; /* Allows clicks to pass through */
   z-index: 10; /* Ensure it overlays but doesn't interfere with high-priority elements */
