@@ -39,10 +39,9 @@ export const Hero = (props: HeroProps) => {
               </div>
             </div>
           </div>
-          <div>
+          <div className="mb-7 md:mb-12">
             <img src="/images/mac.png" alt="mac" />
           </div>
-          <div className="w-[208px] h-[8px] bg-[#fdb300] mt-12 md:mt-24"></div>
         </div>
       </div>
       <BackgroundImage src="/images/matura-bg.png" />

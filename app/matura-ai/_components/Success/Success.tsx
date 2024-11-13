@@ -39,6 +39,9 @@ export const Success = (props: SuccessProps) => {
   return (
     <section id="relume" className="px-[5%] py-8 md:py-14">
       <div className="container">
+        <div className="w-full flex items-center justify-center">
+          <div className="w-[208px] h-[8px] bg-[#fdb300] mb-8 md:mb-14"></div>
+        </div>
         <div className="flex flex-col items-center ">
           <div className="max-w-[920px]">
             <Dialog>
