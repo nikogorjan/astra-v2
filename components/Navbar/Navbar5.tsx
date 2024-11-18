@@ -137,7 +137,7 @@ export const Navbar5Defaults: Navbar5Props = {
       subMenuLinks: [
         { title: "Video Explanations", url: "#" },
         { title: "Resources", url: "#" },
-        { title: "Become a Partner", url: "#" },
+        { title: "Become a Partner", url: "/become-a-partner" },
       ],
     },
   ],

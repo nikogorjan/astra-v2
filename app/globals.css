@@ -380,6 +380,14 @@ body {
   .width-custom {
     width: 100%;
   }
+
+  .donations-number {
+    font-size: 120px;
+  }
+
+  .custom-flex {
+    flex-direction: column;
+  }
 }
 
 @media (max-width: 299px) {
