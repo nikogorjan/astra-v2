@@ -14,13 +14,13 @@ export const Individuals = (props: IndividualsProps) => {
   };
   return (
     <section id="relume" className="px-[5%] py-8 md:py-14">
-      <div className="container px-6">
+      <div className="container">
         <h2 className="text-[28px] md:text-[42px] font-bold leading-7 md:leading-[60px] text-center mb-14">
           Wall of Individual <span className="text-[#FDB300]">podpornikov</span>
         </h2>{" "}
         <div className="flex flex-wrap items-center justify-center gap-y-6 gap-x-3 mb-14">
           {individuals.map((individual, index) => (
-            <div className="w-[200px] flex items-center justify-center">
+            <div className="w-[172px] md:w-[200px] flex items-center justify-center">
               <span className="text-center text-sm font-semibold whitespace-nowrap capitalize leading-6">
                 {individual}
               </span>
