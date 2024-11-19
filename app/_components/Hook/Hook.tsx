@@ -47,16 +47,16 @@ export const Hook = (props: HookProps) => {
             alt={image.alt}
           />
         </div>
-        <div className="absolute inset-0 -z-10 px-[32.25px]">
+        {/*<div className="absolute inset-0 -z-10 px-[32.25px]">
           {" "}
-          {/* Increase z-index */}
+          
           <img
             src="/images/hookbg.svg"
             className="size-full object-cover hidden custom-lg:flex"
             alt="Ceossed Lines"
           />
           <div className="absolute inset-0" />
-        </div>
+        </div>*/}
       </div>
     </section>
   );
@@ -64,7 +64,7 @@ export const Hook = (props: HookProps) => {
 
 export const HookDefaults: HookProps = {
   image: {
-    src: "/images/HookMoc.svg",
+    src: "/images/hookbg.png",
     alt: "Hook image",
   },
 };

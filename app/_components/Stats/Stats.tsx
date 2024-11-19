@@ -5,7 +5,7 @@ export const Stats = () => {
         <div className="grid auto-cols-fr gap-3 md:grid-cols-2">
           <div className="relative grid auto-cols-fr grid-cols-1 first-of-type:row-span-1 first-of-type:flex-col md:col-span-2  lg:first-of-type:col-span-2 border border-[rgba(255,255,255,0.05)] bg-[rgba(255,255,255,0.05)] backdrop-blur-[6px]">
             <img
-              src="/images/full-graph.svg"
+              src="/images/full-graph-2.svg"
               className="w-full object-cover hidden lg:block"
               alt="Overlay Line 1"
             />

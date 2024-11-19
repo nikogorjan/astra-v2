@@ -8,6 +8,7 @@ type BlogPost = {
   image: ImageProps;
   title: string;
   description: string;
+  button: string;
 };
 
 type Props = {
@@ -51,13 +52,16 @@ export const Solutions = (props: SolutionsProps) => {
               </a>
               <div className="flex w-full flex-col items-start justify-start">
                 <a className="mb-2" href={post.url}>
-                  <h2 className="font-bold text-[#1A1A1A] text-[18px] leading-[18px]">
+                  <h2 className="font-bold text-[#15385B] text-[24px] leading-[28px]">
                     {post.title}
                   </h2>
                 </a>
-                <p className="text-[#525B64] font-semibold text-[14px] leading-[140%]">
+                <p className="text-[#1A1A1A] text-[16px] leading-5">
                   {post.description}
                 </p>
+                <div className="bg-[#3C50E0] px-5 py-3 h-[47px] flex items-center justify-center mt-4 cursor-pointer font-bold text-sm leading-[18px]">
+                  {post.button}
+                </div>
               </div>
             </div>
           ))}
@@ -88,32 +92,35 @@ export const SolutionsDefaults: SolutionsProps = {
     {
       url: "#",
       image: {
-        src: "/images/solution1.svg",
+        src: "/images/b1.png",
         alt: "Solution Image 1",
       },
-      title: "Snap a photo or enter a math problem.",
+      title: "AI Tutor",
       description:
-        "Astra AI guides you step-by-step, not just to the answer but through the journey of understanding.",
+        "Get real-time help tailored to your needs, making complex concepts simple.",
+      button: "Get Started",
     },
     {
       url: "#",
       image: {
-        src: "/images/solution2.svg",
+        src: "/images/b2.png",
         alt: "Solution Image 2",
       },
-      title: "Solve the problem, step by step.",
+      title: "Matura AI",
       description:
-        "ASTRA AI won’t just provide you with the answer – it will guide you through the process to give you an understanding of how to get there on your own.",
+        "Achieve higher scores with targeted practice and intelligent feedback.",
+      button: "Learn More",
     },
     {
       url: "#",
       image: {
-        src: "/images/solution3.svg",
+        src: "/images/b3.png",
         alt: "Solution Image 3",
       },
-      title: "Become independent in problem-solving.",
+      title: "Notebook AI",
       description:
-        "Over time, you’ll build a solid foundation and gain enough confidence to effectively solve complex math problems without any assistance.",
+        "Streamline your notes, find key insights, and stay on top of your studies.",
+      button: "Join the Waitlist",
     },
   ],
 };
