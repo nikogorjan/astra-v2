@@ -29,6 +29,7 @@ type NavLinksProps = {
 const NavLinks = ({ links, isMobile }: NavLinksProps) => {
   const [isMobileSubOpen, setIsMobileSubOpen] = useState(false);
   const [activeLink, setActiveLink] = useState<NavLink | null>(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   const handleMobileSubMenuToggle = (link: NavLink | null) => {
     setIsMobileSubOpen(!!link); // Open or close based on the presence of a link
@@ -43,8 +44,6 @@ const NavLinks = ({ links, isMobile }: NavLinksProps) => {
     >
       <div className="flex flex-col gap-8 custom-lg:flex custom-lg:flex-row custom-lg:gap-5 custom-lg:ml-4 custom-lg:w-auto w-full ">
         {links.map((navLink, index) => {
-          const [isHovered, setIsHovered] = useState(false);
-
           return (
             <div
               key={index}
