@@ -22,7 +22,7 @@ export type InstructorsProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Instructors = (props: InstructorsProps) => {
-  const { heading, description, testimonials } = {
+  const { testimonials } = {
     ...InstructorsDefaults,
     ...props,
   } as Props;

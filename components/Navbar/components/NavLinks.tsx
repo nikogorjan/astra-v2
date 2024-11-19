@@ -35,10 +35,6 @@ const NavLinks = ({ links, isMobile }: NavLinksProps) => {
     setActiveLink(link); // Set the active link or null to close
   };
 
-  const closeMobileSubMenu = () => {
-    setIsMobileSubOpen(false);
-  };
-
   return (
     <motion.div
       className="flex w-[200%] custom-lg:w-auto"
