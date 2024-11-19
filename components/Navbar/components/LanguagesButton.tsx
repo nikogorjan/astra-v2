@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { RxChevronLeft } from "react-icons/rx";
 
 type ImageProps = {
   src: string;

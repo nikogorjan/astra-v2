@@ -40,7 +40,7 @@ const SubMenuLinks = ({ link, onClose }: SubMenuLinksProps) => {
 
       {/* Display submenu links */}
       {link?.subMenuLinks?.map((subLink, index) => (
-        <div className="flex gap-2">
+        <div key={index} className="flex gap-2">
           <a
             key={index}
             href={subLink.url}

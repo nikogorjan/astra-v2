@@ -17,7 +17,7 @@ export type RicProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Ric = (props: RicProps) => {
-  const { heading, description, buttons, image } = {
+  const { heading, description, image } = {
     ...RicDefaults,
     ...props,
   } as Props;

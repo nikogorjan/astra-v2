@@ -2,7 +2,6 @@
 
 import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
-import Phones from "./components/Phones";
 import StarButton from "./components/StarButton";
 import { Tagline } from "./components/Tagline";
 import { AnimatedHeading } from "./components/AnimatedHeading";

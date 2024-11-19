@@ -4,7 +4,6 @@ import {
   AccordionContent,
   AccordionItem,
 } from "@relume_io/relume-ui";
-import { RxChevronDown } from "react-icons/rx";
 
 type QuestionsProps = {
   title: string;

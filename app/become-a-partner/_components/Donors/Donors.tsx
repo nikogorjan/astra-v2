@@ -24,7 +24,10 @@ export const Donors = (props: DonorsProps) => {
         </h1>
         <div className="flex flex-wrap items-center justify-center lg:justify-between  gap-y-4">
           {logos.map((logo, index) => (
-            <div className="py-6 w-[254.5px] h-[104px] flex items-center justify-center">
+            <div
+              key={index}
+              className="py-6 w-[254.5px] h-[104px] flex items-center justify-center"
+            >
               <img
                 key={index}
                 src={logo.src}

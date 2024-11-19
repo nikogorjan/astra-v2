@@ -20,7 +20,10 @@ export const Individuals = (props: IndividualsProps) => {
         </h2>{" "}
         <div className="flex flex-wrap items-center justify-center gap-y-6 gap-x-3 mb-14">
           {individuals.map((individual, index) => (
-            <div className="w-[172px] md:w-[200px] flex items-center justify-center">
+            <div
+              key={index}
+              className="w-[172px] md:w-[200px] flex items-center justify-center"
+            >
               <span className="text-center text-sm font-semibold whitespace-nowrap capitalize leading-6">
                 {individual}
               </span>

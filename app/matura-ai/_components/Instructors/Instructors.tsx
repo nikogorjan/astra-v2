@@ -1,5 +1,3 @@
-import { BiSolidStar } from "react-icons/bi";
-
 type ImageProps = {
   src: string;
   alt?: string;

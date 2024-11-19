@@ -9,7 +9,6 @@ import {
   DialogTrigger,
 } from "@relume_io/relume-ui";
 import { useState } from "react";
-import { FaCirclePlay } from "react-icons/fa6";
 import { CgSpinner } from "react-icons/cg";
 import clsx from "clsx";
 
