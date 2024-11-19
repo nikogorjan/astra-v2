@@ -30,9 +30,9 @@ export const Donate = (props: DonateProps) => {
   return (
     <section id="Donate" className="px-[5%] py-8 md:py-14">
       <div className="container max-w-[430px]">
-        <div className="mx-auto max-w-lg text-center mb-8 md:mb-14">
+        <div className="mx-auto max-w-[548px] text-center mb-8 md:mb-14">
           <h2 className="text-[28px] md:text-[42px] font-bold leading-7 md:leading-[60px]">
-            Omogoči <span className="text-[#FDB300]">štipendijo</span>
+            Enable <span className="text-[#FDB300]">Scholarship</span>
           </h2>{" "}
         </div>
 
