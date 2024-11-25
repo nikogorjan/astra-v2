@@ -313,6 +313,19 @@ body {
   flex-shrink: 1; /* Allows it to shrink within the flex container */
 }
 
+.linear-gradient-text {
+  background: linear-gradient(
+    92deg,
+    #364efc 26.4%,
+    #b478ff 56.1%,
+    #f1ac0c 99.54%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 @media (max-width: 1422px) {
   .topic-holder {
     width: 100%;

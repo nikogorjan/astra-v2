@@ -130,7 +130,7 @@ export const Navbar5Defaults: Navbar5Props = {
       ],
     },
     { title: "Matura AI", url: "/matura-ai" },
-    { title: "Notebook AI", url: "#" },
+    { title: "Notebook AI", url: "/notebook-ai" },
     {
       title: "More",
       url: "#",
