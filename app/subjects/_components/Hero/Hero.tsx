@@ -44,8 +44,9 @@ export const Hero = (props: HeroProps) => {
                   Math tutoring using artificial intelligence.
                 </span>{" "}
                 Start learning with AI tutor, where for the price of one hour,
-                you get a whole month of tutoring. If your math grade doesn't
-                improve by at least 2 points, I'll refund your money!
+                you get a whole month of tutoring. If your math grade
+                doesn&apos;t improve by at least 2 points, I&apos;ll refund your
+                money!
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-x-4 gap-y-3 md:mt-8 mb-6 sm:mb-8">
                 <Button className="py-4 px-6 bg-[#3C50E0] custom-button-font font-bold w-full sm:w-auto justify-center border-none cursor-pointer">
