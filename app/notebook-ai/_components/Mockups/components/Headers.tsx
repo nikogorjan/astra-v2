@@ -1,5 +1,3 @@
-import { Button } from "@relume_io/relume-ui";
-
 export const Heading = () => {
   return (
     <div id="frame1" className="px-[5%] pt-8 md:pt-14">
