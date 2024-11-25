@@ -90,7 +90,7 @@ export const Navbar5Defaults: Navbar5Props = {
       subMenuLinks: [
         {
           title: "Math",
-          url: "#",
+          url: "/subjects",
           icon: {
             src: "/Icons/Math.svg",
             alt: "Math icon",
@@ -99,7 +99,7 @@ export const Navbar5Defaults: Navbar5Props = {
         },
         {
           title: "English",
-          url: "#",
+          url: "/subjects",
           icon: {
             src: "/Icons/English.svg",
             alt: "English icon",
@@ -108,7 +108,7 @@ export const Navbar5Defaults: Navbar5Props = {
         },
         {
           title: "Chemistry",
-          url: "#",
+          url: "/subjects",
           icon: {
             src: "/Icons/Chemistry.svg",
             alt: "Chemistry icon",
@@ -118,7 +118,7 @@ export const Navbar5Defaults: Navbar5Props = {
         },
         {
           title: "Physics",
-          url: "#",
+          url: "/subjects",
           icon: {
             src: "/Icons/Atom.svg",
             alt: "Atom logo",

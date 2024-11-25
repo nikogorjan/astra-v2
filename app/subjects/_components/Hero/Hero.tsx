@@ -1,9 +1,8 @@
 "use client";
 
-import { BackgroundImage } from "@/app/_components/Hero/components/BackgroundImage";
 import { Clients } from "@/app/_components/Hero/components/Clients";
 import StarButton from "@/app/_components/Hero/components/StarButton";
-import { Button, Tagline } from "@relume_io/relume-ui";
+import { Button } from "@relume_io/relume-ui";
 import type { ButtonProps } from "@relume_io/relume-ui";
 
 type ImageProps = {
@@ -23,7 +22,7 @@ export type HeroProps = React.ComponentPropsWithoutRef<"section"> &
   Partial<Props>;
 
 export const Hero = (props: HeroProps) => {
-  const { description, buttons, backgroundImage } = {
+  const { buttons } = {
     ...HeroDefaults,
     ...props,
   } as Props;
@@ -34,6 +33,9 @@ export const Hero = (props: HeroProps) => {
         <div className="flex flex-col items-center">
           <div className="text-center">
             <div className="w-full max-w-[880px]">
+              <div className="w-full flex items-center justify-center mb-6">
+                <img src="/Icons/math-icon.png" alt="math icon" />
+              </div>
               <h1 className="text-center text-6xl font-bold leading-10 md:text-[64px] md:leading-[64px] mb-5 md:mb-2.5">
                 Math Tutoring with AI
               </h1>
@@ -54,16 +56,8 @@ export const Hero = (props: HeroProps) => {
               <Clients />
             </div>
           </div>
-          <div className="translateY">
-            {/*<Phones />*/}
-            <img src="images/English.png" alt="Phones image" />
-          </div>
-        </div>
-        <div className="flex items-center justify-center translateY border-margin-top md:mt-0 mt-[10%]">
-          <div className="w-[208px] h-[3px] bg-[#fdb300]"></div>
         </div>
       </div>
-      <BackgroundImage src={backgroundImage.src} alt={backgroundImage.alt} />
     </section>
   );
 };
