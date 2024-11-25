@@ -106,7 +106,8 @@ const SubMenu = ({
             className="hidden custom-lg:bg-[#1A1A1A] custom-lg:w-[248px] custom-lg:absolute custom-lg:z-50 custom-lg:border custom-lg:p-1 custom-lg:rounded-[10px] custom-lg-border-shadow custom-lg:flex flex-col gap-2"
           >
             {navLink.subMenuLinks?.map((subMenuLink, index) => (
-              <div
+              <a
+                href={subMenuLink.url}
                 key={index}
                 className={`custom-lg:h-[52px] custom-lg:flex custom-lg:items-center custom-lg:px-3 custom-lg:py-[10px] custom-lg:gap-3 custom-lg:rounded-md transition-colors ease-in-out duration-300 custom-lg:cursor-pointer sub-menu-items-wrapper ${
                   subMenuLink.flip === "yes" ? "flip-enabled" : ""
@@ -149,7 +150,7 @@ const SubMenu = ({
                     </p>
                   </div>
                 )}
-              </div>
+              </a>
             ))}
           </motion.nav>
         )}
