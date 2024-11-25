@@ -1,0 +1,9 @@
+.low-opacity-mobile {
+  opacity: 0.4;
+}
+
+@media (max-width: 1000px) {
+  .low-opacity-mobile {
+    opacity: 0.3;
+  }
+}

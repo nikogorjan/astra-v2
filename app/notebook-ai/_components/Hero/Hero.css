@@ -1,0 +1,46 @@
+.inner-shadow-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.inner-shadow-wrapper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  width: 100%;
+  height: 30%;
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(12, 12, 12, 1.8),
+    rgba(12, 12, 12, 0.8) 40%,
+    rgba(12, 12, 12, 0.3) 70%,
+
+    transparent 90%
+  );
+  pointer-events: none;
+  border-radius: inherit; /* Inherits border radius for a natural fit */
+}
+
+@media (max-width: 767px) {
+  .inner-shadow-wrapper::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    width: 100%;
+    height: 70%;
+    background: radial-gradient(
+      ellipse at bottom,
+      rgba(12, 12, 12, 1.8),
+      rgba(12, 12, 12, 0.8) 40%,
+      rgba(12, 12, 12, 0.3) 70%,
+
+      transparent 100%
+    );
+    pointer-events: none;
+    border-radius: inherit; /* Inherits border radius for a natural fit */
+  }
+}
